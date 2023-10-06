@@ -3,6 +3,8 @@ import { Outlet, Link } from "react-router-dom"
 function Layout() {
   return (
     <>
+      <h1>Pittsburgh Transformations</h1>
+      <h2>Race, Migration, Education, and Healthcare</h2>
       <nav>
         <ul>
           <li>
