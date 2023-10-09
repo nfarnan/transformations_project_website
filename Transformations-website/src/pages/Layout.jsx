@@ -23,6 +23,8 @@ function Layout() {
       </nav>
 
       <Outlet />
+
+      <footer>Test footer</footer>
     </>
   );
 }
