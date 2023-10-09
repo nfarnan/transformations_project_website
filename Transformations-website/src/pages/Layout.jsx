@@ -3,6 +3,7 @@ import { Outlet, Link } from "react-router-dom"
 function Layout() {
   return (
     <>
+
       <div className="header">
         <h1>Transformations</h1>
       </div>
@@ -24,6 +25,8 @@ function Layout() {
       </nav>
 
       <Outlet />
+
+      <footer>Test footer</footer>
     </>
   );
 }
