@@ -2,10 +2,11 @@ import { Outlet, Link } from "react-router-dom"
 
 function Layout() {
   return (
-    <>
+    <body className="Layout">
 
       <div className="header">
-        <h1>Transformations</h1>
+        <h1>Pittsburgh Transformations</h1>
+        <h2></h2>
       </div>
       <nav className="navbar">
         <ul className="navbar-list">
@@ -23,11 +24,11 @@ function Layout() {
           </li>
         </ul>
       </nav>
-
-      <Outlet />
-
+      <div className="outlet">
+        <Outlet />
+      </div>
       <footer>Test footer</footer>
-    </>
+    </body>
   );
 }
 

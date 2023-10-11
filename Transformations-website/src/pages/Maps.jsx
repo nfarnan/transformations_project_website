@@ -26,28 +26,30 @@ function Map() {
     color:"black"
   }
   return ( 
-    <MapContainer center={[40.4406,-79.9959]} zoom={12.5}>
-    <GeoJSON style={styleContent} data={mapData} />
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      /> 
-      <Marker position={[40.440624,-79.995888]}>
-        <Popup>
-          Pittsburgh
-        </Popup>
-      </Marker>
-      <Rectangle bounds={rectangle} pathOptions={{ color: 'black' }}/>
-      <Circle
-        center={[40.447824,-79.989068]}
-        pathOptions={{ fillColor: 'blue' }}
-        radius={400}>
-        <Tooltip>Marker</Tooltip>
-      </Circle>
-      <Polygon pathOptions={{ color: 'purple' }} positions={multiPolygon}>
-        <Tooltip sticky>sticky Tooltip for Polygon</Tooltip>
-      </Polygon>       
-    </MapContainer> 
+    <div class="Mapcontainer">
+      <MapContainer center={[40.4406,-79.9959]} zoom={12.5}>
+      <GeoJSON style={styleContent} data={mapData} />
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        /> 
+        <Marker position={[40.440624,-79.995888]}>
+          <Popup>
+            Pittsburgh
+          </Popup>
+        </Marker>
+        <Rectangle bounds={rectangle} pathOptions={{ color: 'black' }}/>
+        <Circle
+          center={[40.447824,-79.989068]}
+          pathOptions={{ fillColor: 'blue' }}
+          radius={400}>
+          <Tooltip>Marker</Tooltip>
+        </Circle>
+        <Polygon pathOptions={{ color: 'purple' }} positions={multiPolygon}>
+          <Tooltip sticky>sticky Tooltip for Polygon</Tooltip>
+        </Polygon>       
+      </MapContainer> 
+    </div>
    ); 
    
 } 

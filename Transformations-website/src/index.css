@@ -1,27 +1,61 @@
+
 body {
   margin: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #0000FF;
+}
+
+h1{
+  background-color: white;
+  margin: 0;
+}
+
+footer {
+  background-color: #003594;
+  color: white;
+  padding: 1%;
+  position: relative;
+  bottom: 0;
+  height: 30px;
+}
+
+.Layout {
+  min-height: calc(100vh);
+  display: flex;
+  flex-flow: column;
+  background-color: white;
 }
 
 .header {
   align-items: center;
   text-align: center;
-  background-color: #e100ff;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #003594;
   margin: 0;
+  height: 40px;
 }
 
 .header h1 {
+  background-color: #003594;
   color: #FFFFFF;
   margin: 0;
+  
 }
 
 .navbar {
   margin: 0;
-  background-color: #FF0000;
+  background-color: #003594;
   color: #FFFFFF;
   display: flex;
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 30px;
 }
 
 .navbar ul {
@@ -46,5 +80,24 @@ body {
 }
 
 .navbar li:hover {
-  background-color: #00FF00;
+  background-color: #0000FF;
+}
+
+.outlet {
+  flex-grow: 1;
+}
+
+.home {
+  background-color: white;
+  margin: 0;
+}
+
+.Timeline body{
+  background-color: white;
+}
+
+.DocDisplay {
+  background-color: white;
+  border-style: solid;
+  border-radius: 20px;
 }
