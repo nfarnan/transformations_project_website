@@ -3,7 +3,7 @@ import { TbRewindForward10, TbRewindBackward10 } from 'react-icons/tb';
 import { IoPlaySharp, IoPauseSharp } from 'react-icons/io5'
 
 
-function AudioControls ({ playPauseRef }) {
+function AudioControls ({ audioRef }) {
     const [isPlaying, setIsPlaying] = useState(false);
 
     // function called on button press
@@ -14,12 +14,12 @@ function AudioControls ({ playPauseRef }) {
     // set the audio to play or pause
     useEffect(() => {
         if (isPlaying) {
-            playPauseRef.current.play();
+            audioRef.current.play();
         }
         else {
-            playPauseRef.current.pause();
+            audioRef.current.pause();
         }
-    }, [isPlaying, playPauseRef]);
+    }, [isPlaying, audioRef]);
 
     return (
         <div className="audio-controls">

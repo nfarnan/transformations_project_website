@@ -13,7 +13,7 @@ function Media() {
               file={woods}/>
             <AudioPlayer 
               title={'woods-audio3'}
-              file={'../data/woods-audio.wav'}/>
+              file={woods}/>
       </div> 
     ); 
 } 
