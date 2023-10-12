@@ -1,14 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TbRewindForward10, TbRewindBackward10 } from 'react-icons/tb';
 import { IoPlaySharp, IoPauseSharp } from 'react-icons/io5'
 
 
-function AudioControls () {
+function AudioControls ({ playPauseRef }) {
     const [isPlaying, setIsPlaying] = useState(false);
-    
+
+    // function called on button press
     const toggle = () => {
         setIsPlaying((state) => !state);
     }
+
+    // set the audio to play or pause
+    useEffect(() => {
+        if (isPlaying) {
+            playPauseRef.current.play();
+        }
+        else {
+            playPauseRef.current.pause();
+        }
+    }, [isPlaying, playPauseRef]);
 
     return (
         <div className="audio-controls">
@@ -16,7 +27,7 @@ function AudioControls () {
                 <TbRewindBackward10 />
             </button>
             <button onClick={toggle}>
-                {isPlaying ? <IoPlaySharp /> : <IoPauseSharp />}
+                {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
             </button>
             <button>
                 <TbRewindForward10 />
