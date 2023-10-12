@@ -1,17 +1,19 @@
 import AudioPlayer from '../components/AudioPlayer';
 
+import woods from '../data/woods-audio.wav';
+
 function Media() { 
     return ( 
        <div> 
             <AudioPlayer 
               title={'woods-audio'}
-              loc={'../data/woods-audio.wav'}/>
+              file={woods}/>
             <AudioPlayer 
               title={'woods-audio2'}
-              loc={'../data/woods-audio.wav'}/>
+              file={woods}/>
             <AudioPlayer 
               title={'woods-audio3'}
-              loc={'../data/woods-audio.wav'}/>
+              file={'../data/woods-audio.wav'}/>
       </div> 
     ); 
 } 
