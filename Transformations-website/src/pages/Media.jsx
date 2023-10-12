@@ -1,7 +1,19 @@
+import AudioPlayer from '../components/AudioPlayer';
+
+import woods from '../data/woods-audio.wav';
+
 function Media() { 
     return ( 
        <div> 
-            <h1> This is the Media page </h1> 
+            <AudioPlayer 
+              title={'woods-audio'}
+              file={woods}/>
+            <AudioPlayer 
+              title={'woods-audio2'}
+              file={woods}/>
+            <AudioPlayer 
+              title={'woods-audio3'}
+              file={'../data/woods-audio.wav'}/>
       </div> 
     ); 
 } 
