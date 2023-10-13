@@ -101,3 +101,23 @@ footer {
   border-style: solid;
   border-radius: 20px;
 }
+
+.progress-bar {
+  display: flex;
+}
+
+.controls-and-bar {
+  display: flex;
+}
+
+/* need to account for different appearances depending on browser */
+/* currently only works for firefox */
+input[type="range"]::-moz-range-track {
+  position: relative;
+  background: #CCCCCC;
+  width: 100%;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: #0000FF;
+}

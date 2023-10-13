@@ -1,5 +1,4 @@
 import AudioPlayer from '../components/AudioPlayer';
-
 import woods from '../data/woods-audio.wav';
 
 function Media() { 
@@ -13,7 +12,7 @@ function Media() {
               file={woods}/>
             <AudioPlayer 
               title={'woods-audio3'}
-              file={'../data/woods-audio.wav'}/>
+              file={woods}/>
       </div> 
     ); 
 } 
