@@ -12,6 +12,10 @@ function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed
         setIsPlaying((state) => !state);
     }
 
+    const skip = (time) => {
+        audioRef.current.currentTime += time;
+    }
+
     const repeat = useCallback(() => {
         const currentTime = audioRef.current.currentTime;
         setTimeProgressed(currentTime);
@@ -38,13 +42,13 @@ function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed
 
     return (
         <div className="audio-controls">
-            <button>
+            <button onClick={() => skip(-10)}>
                 <TbRewindBackward10 />
             </button>
             <button onClick={toggle}>
                 {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
             </button>
-            <button>
+            <button onClick={() => skip(10)}>
                 <TbRewindForward10 />
             </button>
         </div>
