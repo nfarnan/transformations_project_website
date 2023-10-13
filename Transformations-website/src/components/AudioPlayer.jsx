@@ -3,7 +3,7 @@ import AudioControls from './AudioControls';
 import ProgressBar from './ProgressBar';
 
 function AudioPlayer ({ title, file }) {
-    const [timeProgressed, setTime] = useState(0);
+    const [timeProgressed, setTimeProgressed] = useState(0);
     const [totalTime, setTotalTime] = useState(0);
     const audioRef = useRef(); // reference to audio element
     const progressBarRef = useRef(); // reference to progress bar
@@ -22,10 +22,16 @@ function AudioPlayer ({ title, file }) {
                 <audio 
                     src={file} 
                     ref={audioRef}
-                    onLoadedMetadata={onLoadedMetadata}/>
+                    onLoadedMetadata={onLoadedMetadata}
+                />
             </div>
             <div className="controls-and-bar">
-                <AudioControls audioRef={audioRef} />
+                <AudioControls 
+                    audioRef={audioRef} 
+                    progressBarRef={progressBarRef}
+                    totalTime={totalTime}
+                    setTimeProgressed={setTimeProgressed}
+                />
                 <ProgressBar 
                     progressBarRef={progressBarRef} 
                     audioRef={audioRef}

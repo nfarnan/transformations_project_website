@@ -6,7 +6,7 @@ function ProgressBar ({ progressBarRef, audioRef, timeProgressed, totalTime }) {
     const formatTime = (time) => {
         if (time && !isNaN(time)) {
             const minutes = Math.floor(time / 60);
-            const seconds = Math.floor(time % 60);
+            let seconds = Math.floor(time % 60);
 
             if (seconds < 10) {
                 seconds = `0${seconds}`;

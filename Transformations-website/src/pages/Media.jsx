@@ -1,5 +1,4 @@
 import AudioPlayer from '../components/AudioPlayer';
-
 import woods from '../data/woods-audio.wav';
 
 function Media() { 
