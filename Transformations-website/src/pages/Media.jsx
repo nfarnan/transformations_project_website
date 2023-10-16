@@ -1,22 +1,21 @@
-//import AudioPlayer from '../components/AudioPlayer';
-//import woods from '../data/woods-audio.wav';
+import AudioPlayer from '../components/AudioPlayer';
+import elephant from '../assets/BabyElephantWalk60.wav';
+import band from '../assets/CantinaBand60.wav';
+import panther from '../assets/PinkPanther60.wav';
 
 function Media() { 
     return ( 
-      /*
        <div> 
             <AudioPlayer 
-              title={'woods-audio'}
-              file={woods}/>
+              title={'Baby Elephant Walk'}
+              file={elephant}/>
             <AudioPlayer 
-              title={'woods-audio2'}
-              file={woods}/>
+              title={'Cantina Band Sounds'}
+              file={band}/>
             <AudioPlayer 
-              title={'woods-audio3'}
-              file={woods}/>
+              title={'Pink Panther Theme'}
+              file={panther}/>
       </div> 
-      */
-     <>hello</>
     ); 
 } 
 export default Media; 
