@@ -1,9 +1,13 @@
-
+/* 
+  Pitt Royal: #003594 
+  Pitt Gold: #FFB81C
+  hover blue: #3366ff
+*/
 body {
   margin: 0;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: #0000FF;
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+  background-color: #003594;
 }
 
 h1{
@@ -18,6 +22,7 @@ footer {
   position: relative;
   bottom: 0;
   height: 30px;
+  padding: 0 5%;
 }
 
 .Layout {
@@ -25,23 +30,24 @@ footer {
   display: flex;
   flex-flow: column;
   background-color: white;
+  margin: 0;
 }
 
 .header {
   align-items: center;
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
   background-color: #003594;
   margin: 0;
   height: 40px;
+  /* padding: 0 5%; */
 }
 
 .header h1 {
   background-color: #003594;
   color: #FFFFFF;
   margin: 0;
-  
 }
 
 .navbar {
@@ -51,11 +57,12 @@ footer {
   display: flex;
   align-items: stretch;
   gap: 2rem;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   position: sticky;
   top: 0;
   z-index: 10;
   height: 30px;
+  padding: 0 5%;
 }
 
 .navbar ul {
@@ -73,14 +80,15 @@ footer {
   display: flex;
   align-items: center;
   padding: .25rem;
-}
-
-.navbar li.active {
-  background-color: #0000FF;
+  text-decoration: none;
 }
 
 .navbar li:hover {
-  background-color: #0000FF;
+  background-color: #3366ff;
+}
+
+.navbar-item {
+  background-color: #FFB81C;
 }
 
 .outlet {
