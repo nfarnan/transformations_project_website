@@ -83,12 +83,16 @@ footer {
   text-decoration: none;
 }
 
-.navbar li:hover {
+.navbar li:hover:not(.navbar-item) {
   background-color: #3366ff;
 }
 
 .navbar-item {
   background-color: #FFB81C;
+}
+
+.navbar-item a {
+  color: #003594;
 }
 
 .outlet {
