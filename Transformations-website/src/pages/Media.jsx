@@ -1,20 +1,20 @@
 import AudioPlayer from '../components/AudioPlayer';
-import elephant from '../assets/BabyElephantWalk60.wav';
-import band from '../assets/CantinaBand60.wav';
-import panther from '../assets/PinkPanther60.wav';
+import piano1 from '../assets/piano1.wav';
+import piano2 from '../assets/piano2.mp3';
+import piano3 from '../assets/piano3.wav';
 
 function Media() { 
     return ( 
        <div> 
             <AudioPlayer 
-              title={'Baby Elephant Walk'}
-              file={elephant}/>
+              title={'Piano 1'}
+              file={piano1}/>
             <AudioPlayer 
-              title={'Cantina Band Sounds'}
-              file={band}/>
+              title={'Piano 2'}
+              file={piano2}/>
             <AudioPlayer 
-              title={'Pink Panther Theme'}
-              file={panther}/>
+              title={'Piano 3'}
+              file={piano3}/>
       </div> 
     ); 
 } 
