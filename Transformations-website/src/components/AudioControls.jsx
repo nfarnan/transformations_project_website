@@ -17,6 +17,11 @@ function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed
     }
 
     const repeat = useCallback(() => {
+        // null check to avoid console spam
+        if (audioRef.current == null) {
+            return;
+        }
+
         const currentTime = audioRef.current.currentTime;
         setTimeProgressed(currentTime);
         progressBarRef.current.value = currentTime;
