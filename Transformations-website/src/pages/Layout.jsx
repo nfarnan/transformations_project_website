@@ -1,4 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom"
+import logo from '../assets/University_of_Pittsburgh_Logo_CMYK_Secondary_Reverse_2-Color.png'
 
 // return list for navbar with correct classnames
 function List() {
@@ -35,11 +36,15 @@ function List() {
 }
 
 function Layout() {
+  const logoAlt = "University of Pittsburgh Shield and Signature";
+
   return (
     <body className="Layout">
       <div className="header">
+        <div className="header-seal">
+          <img src={logo} alt={logoAlt}></img>
+        </div>
         <h1>Pittsburgh Transformations</h1>
-        <h2></h2>
       </div>
       <nav className="navbar">
         <List />
@@ -47,7 +52,12 @@ function Layout() {
       <div className="outlet">
         <Outlet />
       </div>
-      <footer>Test footer</footer>
+      <footer className="footer">
+        <div className="footer-seal">
+          <img src={logo} alt={logoAlt}></img>
+        </div>
+        <h1>Test footer</h1>
+      </footer>
     </body>
   );
 }

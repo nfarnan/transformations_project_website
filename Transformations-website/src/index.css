@@ -5,24 +5,16 @@
 */
 body {
   margin: 0;
-  /* margin-left: 5%; */
-  /* margin-right: 5%; */
   background-color: #003594;
 }
 
-h1{
-  background-color: white;
-  margin: 0;
-}
-
-footer {
+.footer {
+  display: flex;
   background-color: #003594;
   color: white;
-  padding: 1%;
   position: relative;
   bottom: 0;
-  height: 30px;
-  padding: 0 5%;
+  align-items: center;
 }
 
 .Layout {
@@ -34,20 +26,30 @@ footer {
 }
 
 .header {
+  display: flex;
   align-items: center;
   text-align: center;
-  /* margin-left: 5%; */
-  /* margin-right: 5%; */
   background-color: #003594;
   margin: 0;
-  height: 40px;
-  /* padding: 0 5%; */
 }
 
 .header h1 {
-  background-color: #003594;
   color: #FFFFFF;
   margin: 0;
+}
+
+.header-seal, .footer-seal {
+  display: flex;
+}
+
+.header-seal img {
+  width: 220px;
+  padding: 24px;
+}
+
+.footer-seal img {
+  width: 220px;
+  padding: 24px;
 }
 
 .navbar {
@@ -62,7 +64,7 @@ footer {
   top: 0;
   z-index: 10;
   height: 30px;
-  padding: 0 5%;
+  padding: 0 24px;
 }
 
 .navbar ul {
@@ -114,11 +116,24 @@ footer {
   border-radius: 20px;
 }
 
-.progress-bar {
-  display: flex;
+.audio-title {
+  padding: 0 24px;
+  text-align: center;
+}
+
+.audio-player {
 }
 
 .controls-and-bar {
+  display: flex;
+  align-items: center;
+}
+
+.audio-controls {
+  padding: 24px;
+}
+
+.progress-bar {
   display: flex;
 }
 
@@ -132,4 +147,9 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"]::-moz-range-progress {
   background: #0000FF;
+}
+
+/* desktop view */
+@media screen and (min-width: 550px) {
+
 }
