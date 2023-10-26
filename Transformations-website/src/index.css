@@ -3,6 +3,10 @@
   Pitt Gold: #FFB81C
   hover blue: #3366ff
 */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Passion+One:wght@700&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&family=Passion+One:wght@700&family=Rubik&display=swap');
+
 body {
   margin: 0;
   background-color: #003594;
@@ -35,6 +39,8 @@ body {
 
 .header h1 {
   color: #FFFFFF;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
   margin: 0;
 }
 
@@ -127,13 +133,27 @@ body {
 .controls-and-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* text-align: center; */
 }
 
 .audio-controls {
-  padding: 24px;
+  padding: 0 24px;
+  display: flex;
+}
+
+.audio-control-button {
+  background-color: transparent;
+  border: none;
+  margin: .25em;
+}
+
+.audio-control-button-icon {
+  font-size: 2em;
 }
 
 .progress-bar {
+  margin: 0 1em;
   display: flex;
 }
 
