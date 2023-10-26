@@ -14,11 +14,17 @@ body {
 
 .footer {
   display: flex;
-  background-color: #003594;
+  background-color: #2b2b2b;
   color: white;
   position: relative;
   bottom: 0;
   align-items: center;
+}
+
+.footer h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
 }
 
 .Layout {
@@ -37,10 +43,15 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: 'Rubik', sans-serif;
+}
+
 .header h1 {
   color: #FFFFFF;
   font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 2em;
   margin: 0;
 }
 
@@ -63,14 +74,14 @@ body {
   background-color: #003594;
   color: #FFFFFF;
   display: flex;
-  align-items: stretch;
-  gap: 2rem;
-  /* padding: 0 1rem; */
+  /* align-items: stretch; */
   position: sticky;
   top: 0;
   z-index: 10;
   height: 30px;
   padding: 0 24px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* text-align: center; */
 }
 
 .navbar ul {
@@ -78,9 +89,29 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem;
-  text-align: center;
+  /* gap: 1rem; */
+  /* text-align: center; */
+  align-items: center;
 }
+
+.navbar li {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.navbar li:not(:last-child) {
+  border-right: .01rem solid #FFFFFF;  
+}
+
+/* li:not(:last-child)::after{
+  content:""; 
+  border:1px solid #e2e2e2;
+  border-width: 1px 1px 0 0;
+  position:absolute; 
+  right:-3px; 
+  top:0; 
+  height:100%;
+} */
 
 .navbar a {
   color: #FFFFFF;
@@ -127,7 +158,12 @@ body {
   text-align: center;
 }
 
-.audio-player {
+.audio-player { 
+}
+
+.audio-title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
 }
 
 .controls-and-bar {

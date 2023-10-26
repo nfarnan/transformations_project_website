@@ -56,12 +56,13 @@ function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed
             </button>
             <button className="audio-control-button" onClick={toggle}>
                 {isPlaying ? 
-                <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
-                    <IoPauseSharp /> 
-                </IconContext.Provider> : 
-                <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
-                    <IoPlaySharp />
-                </IconContext.Provider>}
+                    <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                        <IoPauseSharp /> 
+                    </IconContext.Provider> : 
+                    <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                        <IoPlaySharp />
+                    </IconContext.Provider>
+                }
             </button>
             <button className="audio-control-button" onClick={() => skip(10)}>
                 <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>

@@ -18,7 +18,7 @@ function AudioPlayer ({ title, file }) {
     return (
         <div className="audio-player">
             <div className="audio-title">
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <audio 
                     src={file} 
                     ref={audioRef}
