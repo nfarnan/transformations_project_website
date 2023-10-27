@@ -6,7 +6,13 @@ function Timeline() {
   {
     title: "October 14, 1883",
     cardTitle: "The “Pittsburgh Proclamation.”",
-    url: "/src/assets/Historical_Material/1014-iwpa-pittsburgh.pdf"
+    url: "/src/assets/Historical_Material/1014-iwpa-pittsburgh.pdf",
+    media: {
+      type: 'IMAGE',
+      source: {
+        url: '/src/assets/Historical_Material/1014-iwpa-pittsburgh-1.png',
+      },
+    },
   },
   {
     title: "April 1, 1911",
@@ -311,11 +317,16 @@ function Timeline() {
   ]
 
   return ( 
-      <div  style={{ width: "100%", height: "850px" }}> 
+      <div  style={{ width: "100%", height: "900px" }}> 
           <h1> This is the Timeline page </h1> 
           <Chrono 
           items={items} 
-          contentDetailsHeight={250}
+          mode = "HORIZONTAL"
+          showAllCardsHorizontal
+          cardWidth = {500}
+          cardHeight = {600}
+          mediaSettings= {{align: 'center', fit: 'contain'}}
+          
           />
     </div> 
   ); 
