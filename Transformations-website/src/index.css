@@ -191,6 +191,12 @@ h1 {
 .progress-bar {
   margin: 0 1em;
   display: flex;
+  padding-right: 172px;
+  /* flex-grow: 3; */
+}
+
+.progress-bar-input {
+  width: 25em;
 }
 
 /* need to account for different appearances depending on browser */
