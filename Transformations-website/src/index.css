@@ -3,6 +3,10 @@
   Pitt Gold: #FFB81C
   hover blue: #3366ff
 */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Passion+One:wght@700&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&family=Passion+One:wght@700&family=Rubik&display=swap');
+
 body {
   margin: 0;
   background-color: #003594;
@@ -10,11 +14,17 @@ body {
 
 .footer {
   display: flex;
-  background-color: #003594;
+  background-color: #2b2b2b;
   color: white;
   position: relative;
   bottom: 0;
   align-items: center;
+}
+
+.footer h1 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
 }
 
 .Layout {
@@ -33,8 +43,15 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: 'Rubik', sans-serif;
+}
+
 .header h1 {
   color: #FFFFFF;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
   margin: 0;
 }
 
@@ -43,12 +60,12 @@ body {
 }
 
 .header-seal img {
-  width: 220px;
+  width: 148px;
   padding: 24px;
 }
 
 .footer-seal img {
-  width: 220px;
+  width: 148px;
   padding: 24px;
 }
 
@@ -57,14 +74,14 @@ body {
   background-color: #003594;
   color: #FFFFFF;
   display: flex;
-  align-items: stretch;
-  gap: 2rem;
-  /* padding: 0 1rem; */
+  /* align-items: stretch; */
   position: sticky;
   top: 0;
   z-index: 10;
   height: 30px;
   padding: 0 24px;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  /* text-align: center; */
 }
 
 .navbar ul {
@@ -72,9 +89,29 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem;
-  text-align: center;
+  /* gap: 1rem; */
+  /* text-align: center; */
+  align-items: center;
 }
+
+.navbar li {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.navbar li:not(:last-child) {
+  border-right: .01rem solid #FFFFFF;  
+}
+
+/* li:not(:last-child)::after{
+  content:""; 
+  border:1px solid #e2e2e2;
+  border-width: 1px 1px 0 0;
+  position:absolute; 
+  right:-3px; 
+  top:0; 
+  height:100%;
+} */
 
 .navbar a {
   color: #FFFFFF;
@@ -121,19 +158,38 @@ body {
   text-align: center;
 }
 
-.audio-player {
+.audio-player { 
+}
+
+.audio-title {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
 }
 
 .controls-and-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* text-align: center; */
 }
 
 .audio-controls {
-  padding: 24px;
+  padding: 0 24px;
+  display: flex;
+}
+
+.audio-control-button {
+  background-color: transparent;
+  border: none;
+  margin: .25em;
+}
+
+.audio-control-button-icon {
+  font-size: 2em;
 }
 
 .progress-bar {
+  margin: 0 1em;
   display: flex;
 }
 

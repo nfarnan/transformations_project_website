@@ -1,6 +1,8 @@
 import { useCallback, useRef, useEffect, useState } from 'react';
 import { TbRewindForward10, TbRewindBackward10 } from 'react-icons/tb';
 import { IoPlaySharp, IoPauseSharp } from 'react-icons/io5'
+import { IconContext } from 'react-icons'
+
 
 
 function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed }) {
@@ -47,14 +49,25 @@ function AudioControls ({ audioRef, progressBarRef, totalTime, setTimeProgressed
 
     return (
         <div className="audio-controls">
-            <button onClick={() => skip(-10)}>
-                <TbRewindBackward10 />
+            <button className="audio-control-button" onClick={() => skip(-10)}>
+                <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                    <TbRewindBackward10 />
+                </IconContext.Provider>
             </button>
-            <button onClick={toggle}>
-                {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
+            <button className="audio-control-button" onClick={toggle}>
+                {isPlaying ? 
+                    <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                        <IoPauseSharp /> 
+                    </IconContext.Provider> : 
+                    <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                        <IoPlaySharp />
+                    </IconContext.Provider>
+                }
             </button>
-            <button onClick={() => skip(10)}>
-                <TbRewindForward10 />
+            <button className="audio-control-button" onClick={() => skip(10)}>
+                <IconContext.Provider value={{ className: 'audio-control-button-icon' }}>
+                    <TbRewindForward10 />
+                </IconContext.Provider>
             </button>
         </div>
     )
