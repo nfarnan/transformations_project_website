@@ -16,13 +16,22 @@ function List() {
     if (link == location.pathname) {
       return (
         <li key={i} className="navbar-item">
-          <Link to={link}>{dict[link]}</Link>
+          <div className="outer-link-div">
+            <Link to={link}>
+              <div className="inner-link-div">{dict[link]}</div>
+            </Link>
+          </div>
         </li>
       );
     } else {
       return (
         <li key={i}>
-          <Link to={link}>{dict[link]}</Link>
+          <div className="outer-link-div">
+            <Link to={link}>
+              <div className="inner-link-div">{dict[link]}</div>
+            </Link>
+          </div>
+          
         </li>
       );
     }

@@ -74,14 +74,12 @@ h1 {
   background-color: #003594;
   color: #FFFFFF;
   display: flex;
-  /* align-items: stretch; */
   position: sticky;
   top: 0;
   z-index: 10;
   height: 30px;
   padding: 0 24px;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  /* text-align: center; */
 }
 
 .navbar ul {
@@ -89,29 +87,12 @@ h1 {
   margin: 0;
   list-style: none;
   display: flex;
-  /* gap: 1rem; */
-  /* text-align: center; */
   align-items: center;
 }
 
-.navbar li {
-  padding-left: .5rem;
-  padding-right: .5rem;
-}
-
 .navbar li:not(:last-child) {
-  border-right: .01rem solid #FFFFFF;  
+  border-right: .01rem solid #FFFFFF;
 }
-
-/* li:not(:last-child)::after{
-  content:""; 
-  border:1px solid #e2e2e2;
-  border-width: 1px 1px 0 0;
-  position:absolute; 
-  right:-3px; 
-  top:0; 
-  height:100%;
-} */
 
 .navbar a {
   color: #FFFFFF;
@@ -132,6 +113,15 @@ h1 {
 
 .navbar-item a {
   color: #003594;
+}
+
+.inner-link-div {
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.outer-link-div {
+  padding: 0;
 }
 
 .outlet {
@@ -159,6 +149,11 @@ h1 {
 }
 
 .audio-player { 
+  border-color: black;
+  border-style: solid;
+  padding-bottom: 1rem;
+  border-width: 1px;
+  width: 60%;
 }
 
 .audio-title {
@@ -192,7 +187,8 @@ h1 {
   margin: 0 1em;
   display: flex;
   padding-right: 172px;
-  /* flex-grow: 3; */
+  /* margin-right: 172px; */
+  flex-grow: 3;
 }
 
 .progress-bar-input {
