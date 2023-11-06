@@ -7,6 +7,7 @@ function Timeline() {
     title: "October 14, 1883",
     cardTitle: "The “Pittsburgh Proclamation.”",
     cardSubtitle: "Adopted by the Founding Congress of the American Federation of the International Working People’s Association",
+    cardDetailedText:"Comrades! In the Declaration of Independence of the United States we read: When a long Train of Abuses and Usurpations, pursuing invariably the same Object, evinces a Design to reduce them under absolute Despotism, it is their Right, it is their Duty, to throw off such Government, and to provide new Guards for their future Security. Has the moment not arrived to heed the advice of Thomas Jefferson, the true founder of the American Republic? Has government not become oppression?",
     url: "/src/assets/Historical_Material/1014-iwpa-pittsburgh.pdf",
     media: {
       type: 'IMAGE',
@@ -19,6 +20,7 @@ function Timeline() {
     title: "April 1, 1911",
     cardTitle: "Sixteenth Negro “Colored”",
     cardSubtitle: "According to Kentuck Court Term Colored Applies to Any one With Negro Blood",
+    cardDetailedText: "Frankfort, Ky -(Special.)- That the term 'colored' includes all persons wholly of Negro blood or having any appreciable admixture thereof, was the way in which the court of appeals of Kentucky construed the state school down here. /n Suit was brought by one Troy Mullins against eh school trustees of district in Pike county, demanding the admittance of some children of whom he acted as guardian.",
     url: "/src/assets/Historical_Material/SIXTEENTH_NEGRO_COLORED_ACC.pdf",
     media: {
       type: 'IMAGE',
@@ -31,6 +33,7 @@ function Timeline() {
     title: "April 15, 1911",
     cardTitle: "New Chapter in Human History",
     cardSubtitle: "First Universal Races Congress Will Mark Its Beginning",
+    cardDetailedText: "London-  For the first time in human history there is a clear prospect of one ocmmon ideal animating all peoples, and thus the beautiful old hope of the brotherhood of nations and races is at last moving appreciably toward realization. What better means of celebrating the birth of the new era, of brusing aside the prejudices and suspicions or correcting misunderstandings than bymen and women from east and west, white and nonwhite, meeting as friends and equals in a great congress?",
     url: "/src/assets/Historical_Material/New Chapter in Human History .pdf",
     media: {
       type: 'IMAGE',
@@ -768,18 +771,20 @@ function Timeline() {
   ]
 
   return ( 
-      <div className="timeline-div"> 
-          <h1> This is the Timeline page </h1> 
-          <Chrono 
-          items={items} 
-          mode = "HORIZONTAL"
-          showAllCardsHorizontal
-          textOverlay 
-          cardWidth = {500}
-          cardHeight = {600}
-          mediaSettings= {{align: 'center', fit: 'contain'}}
-          
-          />
+    <div className="timeline-div"> 
+        <h1> Document Timeline </h1> 
+        <div className="chrono"> 
+        <Chrono 
+        items={items} 
+        mode = "HORIZONTAL"
+        showAllCardsHorizontal
+        textOverlay 
+        cardWidth = {500}
+        cardHeight = {600}
+        
+        mediaSettings= {{align: 'center', fit: 'contain'}}
+        />
+        </div>
     </div> 
   ); 
 } 

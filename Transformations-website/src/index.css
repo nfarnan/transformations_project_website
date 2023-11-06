@@ -159,6 +159,10 @@ h1 {
   padding-left: 10rem;
   padding-right: 10rem;
 }
+.chrono h1 {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
   
 
 .DocDisplay {
