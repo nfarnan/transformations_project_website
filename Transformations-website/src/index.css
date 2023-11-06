@@ -135,6 +135,7 @@ h1 {
 
 .outlet {
   flex-grow: 1;
+  position: relative;
 }
 
 .home {
@@ -166,6 +167,10 @@ h1 {
   border-radius: 20px;
 }
 
+.audio-div {
+  margin-top: 5rem;
+}
+
 .audio-title {
   padding: 0 24px;
   text-align: center;
@@ -176,7 +181,9 @@ h1 {
   border-style: solid;
   padding-bottom: 1rem;
   border-width: 1px;
-  /* width: 100%; */
+  text-align: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
 
 .audio-title {
