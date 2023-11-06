@@ -5,7 +5,7 @@ import piano3 from '../assets/piano3.wav';
 
 function Media() { 
     return ( 
-       <div> 
+       <div className="audio-div">
             <AudioPlayer 
               title={'Piano 1'}
               file={piano1}/>
