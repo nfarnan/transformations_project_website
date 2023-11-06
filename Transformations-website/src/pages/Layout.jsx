@@ -31,7 +31,6 @@ function List() {
               <div className="inner-link-div">{dict[link]}</div>
             </Link>
           </div>
-          
         </li>
       );
     }

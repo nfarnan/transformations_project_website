@@ -317,7 +317,7 @@ function Timeline() {
   ]
 
   return ( 
-      <div  style={{ width: "100%", height: "900px" }}> 
+      <div className="timeline-div"> 
           <h1> This is the Timeline page </h1> 
           <Chrono 
           items={items} 
