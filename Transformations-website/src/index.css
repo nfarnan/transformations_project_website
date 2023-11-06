@@ -19,6 +19,8 @@ body {
   position: relative;
   bottom: 0;
   align-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .footer h1 {
@@ -41,6 +43,9 @@ body {
   text-align: center;
   background-color: #003594;
   margin: 0;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  position: relative;
 }
 
 h1 {
@@ -51,7 +56,7 @@ h1 {
   color: #FFFFFF;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.75em;
   margin: 0;
 }
 
@@ -59,14 +64,15 @@ h1 {
   display: flex;
 }
 
-.header-seal img {
+.header-seal img, .footer-seal img {
   width: 148px;
-  padding: 24px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 
 .footer-seal img {
-  width: 148px;
-  padding: 24px;
+  width: 130px;
 }
 
 .navbar {
@@ -78,7 +84,10 @@ h1 {
   top: 0;
   z-index: 10;
   height: 30px;
-  padding: 0 24px;
+  /* padding-left: 11.25rem; */
+  /* padding-right: 11.25rem; */
+  padding-left: 10rem;
+  padding-right: 10rem;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -130,12 +139,26 @@ h1 {
 
 .home {
   background-color: white;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 .Timeline body{
   background-color: white;
 }
+
+.timeline-div {
+  /* width: 100%; */
+  height: 900px;
+}
+
+.timeline-div h1 {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+  
 
 .DocDisplay {
   background-color: white;
@@ -153,7 +176,7 @@ h1 {
   border-style: solid;
   padding-bottom: 1rem;
   border-width: 1px;
-  width: 60%;
+  /* width: 100%; */
 }
 
 .audio-title {
@@ -165,7 +188,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
 }
 
 .audio-controls {
@@ -180,19 +202,16 @@ h1 {
 }
 
 .audio-control-button-icon {
-  font-size: 2em;
+  font-size: 1.5rem;
 }
 
 .progress-bar {
-  margin: 0 1em;
+  margin: 0 1rem;
   display: flex;
-  padding-right: 172px;
-  /* margin-right: 172px; */
-  flex-grow: 3;
 }
 
 .progress-bar-input {
-  width: 25em;
+  width: 30rem;
 }
 
 /* need to account for different appearances depending on browser */
