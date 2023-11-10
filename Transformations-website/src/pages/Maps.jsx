@@ -17,7 +17,7 @@ export default function Map() {
       </LayersControl.BaseLayer> )   
     }
     return ( 
-      <MapContainer center={center} zoom={11.55} scrollWheelZoom={false} whenReady={(map) =>{setMap(map.target)}}  >
+      <MapContainer center={center} zoom={11} scrollWheelZoom={false} whenReady={(map) =>{setMap(map.target)}}  >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
