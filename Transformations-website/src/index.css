@@ -173,6 +173,7 @@ h1 {
 
 .audio-div {
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .audio-title {
@@ -193,6 +194,13 @@ h1 {
 .audio-title {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+.audio-description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .controls-and-bar {

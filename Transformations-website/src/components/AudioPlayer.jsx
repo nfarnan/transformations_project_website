@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import AudioControls from './AudioControls';
 import ProgressBar from './ProgressBar';
 
-function AudioPlayer ({ title, file }) {
+function AudioPlayer ({ title, file, desc }) {
     const [timeProgressed, setTimeProgressed] = useState(0);
     const [totalTime, setTotalTime] = useState(0);
     const audioRef = useRef(); // reference to audio element
@@ -25,6 +25,9 @@ function AudioPlayer ({ title, file }) {
                     onLoadedMetadata={onLoadedMetadata}
                 />
             </div>
+            <div className="audio-description">
+                <p>{desc}</p>
+            </div>
             <div className="controls-and-bar">
                 <AudioControls 
                     audioRef={audioRef} 
@@ -39,7 +42,6 @@ function AudioPlayer ({ title, file }) {
                     totalTime={totalTime}
                 />
             </div>
-            
         </div>
     )
 }
