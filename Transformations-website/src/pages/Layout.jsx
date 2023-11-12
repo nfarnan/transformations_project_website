@@ -52,7 +52,7 @@ function Layout() {
         <div className="header-seal">
           <img src={logo} alt={logoAlt}></img>
         </div>
-        <h1>Pittsburgh Transformations</h1>
+        <h1>The Pittsburgh Transformations Project</h1>
       </div>
       <nav className="navbar">
         <List />
