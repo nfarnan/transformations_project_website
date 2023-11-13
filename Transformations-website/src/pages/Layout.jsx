@@ -1,4 +1,5 @@
-import { Outlet, Link, useLocation } from "react-router-dom"
+import { Outlet, Link, useLocation } from 'react-router-dom'
+import { FaSquareFacebook, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6'
 import logo from '../assets/University_of_Pittsburgh_Logo_CMYK_Secondary_Reverse_2-Color.png'
 
 // return list for navbar with correct classnames
@@ -61,10 +62,28 @@ function Layout() {
         <Outlet />
       </div>
       <footer className="footer">
-        <div className="footer-seal">
-          <img src={logo} alt={logoAlt}></img>
+        <div className="contacts">
+          <h3>Contact Us</h3>
+          <p>
+            <strong>
+              Center for Ethnic<br></br>
+              Studies Research<br></br>
+            </strong>
+            4212 Posvar Hall<br></br>
+            University of Pittsburgh<br></br>
+            Pittsburgh, PA 15260
+          </p>
+          <p>
+            <strong>General Inquiries: </strong> 
+            <a className="email-link" href="mailto:cesr@pitt.edu">cesr@pitt.edu</a>
+          </p>
         </div>
-        <h1>Test footer</h1>
+        <div className="follows">
+          <h3>Follow Us</h3>
+          <FaSquareFacebook></FaSquareFacebook>
+          <FaSquareInstagram></FaSquareInstagram>
+          <FaSquareXTwitter></FaSquareXTwitter>
+        </div>
       </footer>
     </body>
   );
