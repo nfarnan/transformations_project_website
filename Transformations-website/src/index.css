@@ -89,7 +89,8 @@ h1 {
 }
 
 .header-seal img, .footer-seal img {
-  width: 148px;
+  /* width: 148px;   */ /* pitt logo width */
+  width: 200px;
   padding-top: 24px;
   padding-right: 24px;
   padding-bottom: 24px;

@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
 import { FaSquareFacebook, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6'
-import logo from '../assets/University_of_Pittsburgh_Logo_CMYK_Secondary_Reverse_2-Color.png'
+// import logo from '../assets/University_of_Pittsburgh_Logo_CMYK_Secondary_Reverse_2-Color.png'
+import logo from '../assets/CESR logo horizontal white copy.png';
 
 // return list for navbar with correct classnames
 function List() {
@@ -45,7 +46,7 @@ function List() {
 }
 
 function Layout() {
-  const logoAlt = "University of Pittsburgh Shield and Signature";
+  const logoAlt = "Center for Ethnic Studies Research logo";
 
   return (
     <body className="Layout">
