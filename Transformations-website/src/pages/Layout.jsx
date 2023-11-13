@@ -81,9 +81,15 @@ function Layout() {
         </div>
         <div className="follows">
           <h3>Follow Us</h3>
-          <FaSquareFacebook></FaSquareFacebook>
-          <FaSquareInstagram></FaSquareInstagram>
-          <FaSquareXTwitter></FaSquareXTwitter>
+          <a className="social-media" href="https://www.facebook.com/cesrpitt">
+            <FaSquareFacebook></FaSquareFacebook>
+          </a>
+          <a className="social-media" href="https://www.instagram.com/cesr_pitt/">
+            <FaSquareInstagram></FaSquareInstagram>
+          </a>
+          <a className="social-media" href="https://twitter.com/cesr_pitt">
+            <FaSquareXTwitter></FaSquareXTwitter>
+          </a>
         </div>
       </footer>
     </body>

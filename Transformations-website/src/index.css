@@ -36,12 +36,16 @@ strong {
 }
 
 .contacts, .follows {
-  padding-right: 10rem;
   padding-top: 50px;
+}
+
+.follows {
+  text-align: center;
 }
 
 .contacts p {
   font-size: 12px;
+  padding-right: 10rem;
 }
 
 .email-link {
@@ -51,6 +55,13 @@ strong {
 
 .email-link:hover {
   text-decoration: underline;
+}
+
+.social-media {
+  font-size: 2rem;
+  color: inherit;
+  text-decoration: inherit;
+  padding: 3%;
 }
 
 .Layout {
