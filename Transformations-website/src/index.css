@@ -64,6 +64,10 @@ strong {
   padding: 3%;
 }
 
+.social-media:hover {
+  color: #FFB81C;
+}
+
 .Layout {
   min-height: calc(100vh);
   display: flex;
