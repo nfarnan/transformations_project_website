@@ -1,13 +1,17 @@
-import { MapContainer, TileLayer, LayersControl,GeoJSON} from 'react-leaflet'
-  import 'leaflet/dist/leaflet.css'
-  import 'leaflet/dist/leaflet'
-  import data from '../pages/mapData/pitt.json'
-  import {useState } from 'react'
-  import mapdata from '../pages/mapData/2020_zipCode.json'
- import Legend from '../pages/mapData/Legend'
- import '../App.css'
+import {MapContainer, TileLayer, LayersControl,GeoJSON} from 'react-leaflet'
+import 'leaflet/dist/leaflet.css'
+import 'leaflet/dist/leaflet'
+import data from '../pages/mapData/pitt.json'
+import {useState } from 'react'
+import geo2020 from '../pages/mapData/2020_zipCode.json'
+import geo1980 from '../pages/mapData/geo1980.json'
+import map1980 from '../pages/mapData/1980.json'
+import Legend from '../pages/mapData/Legend'
+import '../App.css'
+import Controls  from './mapData/Control'
 const center = [40.44, -79.99]
 export default function Map() { 
+
     const [map, setMap] = useState(null)
     const table = []
     
@@ -15,6 +19,15 @@ export default function Map() {
       table.push(<LayersControl.BaseLayer key = {key} checked name = {key}>
           <GeoJSON  style={{color:"black"}}  data= {pittZips()} onEachFeature= {onEachZipCodeCloser(data[key])}/>         
       </LayersControl.BaseLayer> )   
+    }
+    
+    // add 1980 map data with a layer control
+    for(let key in map1980){
+     // console.log(key)
+      table.push(<LayersControl.BaseLayer key = {key} checked={false} name = {key}> 
+        < GeoJSON  style={{color:"black"}}  data= {geo1980}/>          
+      </LayersControl.BaseLayer> )  
+      
     }
     return ( 
       <MapContainer center={center} zoom={11} scrollWheelZoom={false} whenReady={(map) =>{setMap(map.target)}}  >
@@ -25,18 +38,19 @@ export default function Map() {
         <LayersControl position="topright" style={{width: "100px"}} >                                         
           {table}
         </LayersControl>  
-        <Legend map={map} data ={getColor} />
+    {/*   <Legend map={map} data ={getColor} />  */}
     </MapContainer>
     )
   } 
 
+ 
 function pittZips(){
     const zips = [15201,15122,15202,15203,15204,15205,15206,15207,15208,15209,15210,15211,15212,15213,15214,15215,15216,15217,15218,15219,15220,15221,15222,15223,15224,15225,15226,15227,15228,15229,15230,15231,15232,15233,15234,15235,15236,15237,15238,15239,15240,15241,15242,15243,15244,15250,15251,15260,15264,15272,15274,15275,15276,15290,15295]
     const pittsburghData = []
-    for(let i=1; i < mapdata.features.length; i++){
-      let zipcode = parseInt(mapdata.features[i].properties["ZCTA5CE10"])
+    for(let i=1; i < geo2020.features.length; i++){
+      let zipcode = parseInt(geo2020.features[i].properties["ZCTA5CE10"])
       if (zips.includes(zipcode)){
-          pittsburghData.push(mapdata.features[i])
+          pittsburghData.push(geo2020.features[i])
       }
     }
     return pittsburghData
@@ -73,5 +87,5 @@ function getColor(d) {
          d > 500 ? "#21de90":
          d > 100 ? "#0ff0dc":
          d > 50 ? "#93efe4":
-         "#e4fbf8"
+         "#e4fbf8"   
 }

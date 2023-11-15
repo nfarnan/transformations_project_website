@@ -3,7 +3,6 @@ import './legend.css'
 
 function Legend({ map,data}) {
     if (map) {
-      console.log("hi",data)
       const legend = L.control({ position: "bottomright" });
       legend.onAdd = function () {
         const div = L.DomUtil.create('div', 'info legend'),
