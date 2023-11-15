@@ -23,11 +23,9 @@ export default function Map() {
     
     // add 1980 map data with a layer control
     for(let key in map1980){
-     // console.log(key)
       table.push(<LayersControl.BaseLayer key = {key} checked={false} name = {key}> 
-        < GeoJSON  style={{color:"black"}}  data= {geo1980}/>          
+        < GeoJSON  data= {geo1980} onEachFeature={onEachTract(map1980[key])}/>          
       </LayersControl.BaseLayer> )  
-      
     }
     return ( 
       <MapContainer center={center} zoom={11} scrollWheelZoom={false} whenReady={(map) =>{setMap(map.target)}}  >
@@ -38,7 +36,7 @@ export default function Map() {
         <LayersControl position="topright" style={{width: "100px"}} >                                         
           {table}
         </LayersControl>  
-    {/*   <Legend map={map} data ={getColor} />  */}
+     <Legend map={map} data ={getColor} />
     </MapContainer>
     )
   } 
@@ -72,6 +70,24 @@ function onEachZipCodeCloser(data){
           })
       }
     });
+  }
+}
+function onEachTract(data){
+  return function onEachFeature(feature,layer){
+    Object.entries(data).forEach((entry) => {
+      let [tract, pop] = entry;
+      pop = pop.toString().replaceAll(',','')
+      if(feature.properties.tract == tract){
+        console.log(layer)
+        layer.setStyle({
+         color: "black",
+         fill:true,
+         fillColor: getColor(pop),
+         fillOpacity: .7,
+       })
+      } 
+    });
+    
   }
 }
 function getColor(d) {
