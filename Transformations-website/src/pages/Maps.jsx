@@ -62,11 +62,11 @@ function onEachZipCodeCloser(data){
       if(feature.properties.ZCTA5CE10 == zip){
         layer.setStyle({
           fillColor: getColor(value),
-          weight: 2,
-          opacity: 1,
+          weight: 1,
+          opacity: .5,
           color: 'black',
           dashArray: '3',
-          fillOpacity: 0.7
+          fillOpacity: 0.7,
           })
       }
     });
