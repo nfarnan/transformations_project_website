@@ -7,10 +7,9 @@
     width: 50%;
     height: 100%;
   }
-  
   .legend i {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     float: left;
     margin-right: .5rem;
     opacity: 1;
