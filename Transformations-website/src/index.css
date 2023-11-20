@@ -37,6 +37,7 @@ strong {
 
 .contacts, .follows {
   padding-top: 50px;
+  padding-bottom: 50px
 }
 
 .follows {
@@ -94,8 +95,8 @@ h1 {
 .header h1 {
   color: #FFFFFF;
   font-family: 'Rubik', sans-serif;
-  font-weight: 400;
-  font-size: 1.75em;
+  font-weight: 300;
+  font-size: 1.5em;
   margin: 0;
 }
 
@@ -104,7 +105,6 @@ h1 {
 }
 
 .header-seal img, .footer-seal img {
-  /* width: 148px;   */ /* pitt logo width */
   width: 200px;
   padding-top: 24px;
   padding-right: 24px;
@@ -182,6 +182,7 @@ h1 {
   margin-right: auto;
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 5%;
 }
 
 .page-title {
@@ -199,7 +200,6 @@ h1 {
 }
 
 .timeline-div {
-  /* width: 100%; */
   height: 900px;
 }
 
@@ -235,8 +235,6 @@ h1 {
   padding-bottom: 1rem;
   border-width: 1px;
   text-align: center;
-  /* margin-left: 15rem;
-  margin-right: 15rem; */
   margin-left: 15%;
   margin-right: 15%;
 }
@@ -260,14 +258,14 @@ h1 {
 }
 
 .audio-controls {
-  padding: 0 24px;
+  padding: 0 5%;
   display: flex;
 }
 
 .audio-control-button {
   background-color: transparent;
   border: none;
-  margin: .25em;
+  margin: 1%;
 }
 
 .audio-control-button-icon {
@@ -275,12 +273,14 @@ h1 {
 }
 
 .progress-bar {
-  margin: 0 1rem;
   display: flex;
+  padding-right: 5%;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
 }
 
 .progress-bar-input {
-  width: 30rem;
+  width: 600px;
 }
 
 /* need to account for different appearances depending on browser */
@@ -295,7 +295,73 @@ input[type="range"]::-moz-range-progress {
   background: #0000FF;
 }
 
-/* desktop view */
-@media screen and (min-width: 550px) {
+@media screen and (max-width: 1200px) {
+  .progress-bar-input {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .controls-and-bar {
+    display: block;
+  }
+
+  .progress-bar {
+    padding: 0 5%;
+    justify-content: center;
+  }
+
+  .audio-controls {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    display: block;
+    padding-right: 1%;
+  }
+
+  .header h1 {
+    font-weight: 300;
+    /* font-size: 24px; */
+    padding-bottom: 24px;
+    text-align: left;
+  }
+
+  .audio-player {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    display: block;
+  }
+
+  .contacts {
+    padding-bottom: 0;
+  }
+  
+  .contacts p {
+    padding-right: 0;
+  }
+
+  .follows {
+    text-align: left;
+    padding-bottom: 50px
+  }
+
+  .social-media {
+    padding: .5%;
+  }
+
+  @media screen and (max-width: 500px) {
+    .audio-player {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
 
 }
