@@ -28,16 +28,20 @@ export default function Map() {
       </LayersControl.BaseLayer> )  
     }
     return ( 
-      <MapContainer center={center} zoom={11} scrollWheelZoom={false}  whenReady={(map) =>{setMap(map.target)}}  >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <LayersControl position="topright" style={{width: "100px"}} >                                         
-          {table}
-        </LayersControl>  
-     <Legend map={map} data ={getColor} />
-    </MapContainer>
+      <div>
+        <h2>Sample text</h2>
+        <MapContainer center={center} zoom={11} scrollWheelZoom={false}  whenReady={(map) =>{setMap(map.target)}}  >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <LayersControl position="topright" style={{width: "100px"}} >                                         
+            {table}
+          </LayersControl>  
+        <Legend map={map} data ={getColor} />
+      </MapContainer>
+      </div>
+      
     )
   } 
 
