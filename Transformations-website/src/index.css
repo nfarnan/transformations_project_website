@@ -303,16 +303,31 @@ input[type="range"]::-moz-range-progress {
 
 @media screen and (max-width: 950px) {
   .controls-and-bar {
-    display: block;
+    display: grid;
+
+    /* block details below */
+    /* display: block;
+    align-items: center; */
   }
 
   .progress-bar {
-    padding: 0 5%;
+    /* width: 100%; */
+    padding: 0;
     justify-content: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    /* block details below */
+    /* padding: 0 5%; */
   }
 
   .audio-controls {
     justify-content: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    /* block details below */
+    /* justify-content: center; */
   }
 }
 
@@ -324,14 +339,13 @@ input[type="range"]::-moz-range-progress {
 
   .header h1 {
     font-weight: 300;
-    /* font-size: 24px; */
     padding-bottom: 24px;
     text-align: left;
   }
 
   .audio-player {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -357,11 +371,33 @@ input[type="range"]::-moz-range-progress {
     padding: .5%;
   }
 
-  @media screen and (max-width: 500px) {
-    .audio-player {
-      margin-left: 0%;
-      margin-right: 0%;
-    }
+  .audio-player {
+    margin-left: 5%;
+    margin-right: 5%;
   }
+}
 
+@media screen and (max-width: 550px) {
+  .audio-player {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .progress-bar-input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .progress-bar-input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .progress-bar-input {
+    width: 200px;
+  }
 }
