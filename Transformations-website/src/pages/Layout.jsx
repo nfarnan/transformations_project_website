@@ -5,7 +5,7 @@ import { IoMenu } from "react-icons/io5";
 import logo from '../assets/CESR logo horizontal white copy.png';
 
 // return list for navbar with correct classnames
-function List() {
+function List({ setNavClass }) {
   const location = useLocation();
   const links = ["/", "/map", "/Timeline", "/Media"];
   const names = ["Home", "Map", "Timeline", "Media"];
@@ -18,8 +18,11 @@ function List() {
   const listItems = links.map((link, i) => {
     if (link == location.pathname) {
       return (
-        <li key={i} className="navbar-item">
-          <div className="outer-link-div">
+        <li key={i} className="navbar-item" onClick={() => {
+          console.log("clicked li");
+          setNavClass("navbar");
+        }}>
+          <div className="outer-link-div" >
             <Link to={link}>
               <div className="inner-link-div">{dict[link]}</div>
             </Link>
@@ -28,7 +31,10 @@ function List() {
       );
     } else {
       return (
-        <li key={i}>
+        <li key={i} onClick={() => {
+          console.log("clicked li");
+          setNavClass("navbar");
+        }}>
           <div className="outer-link-div">
             <Link to={link}>
               <div className="inner-link-div">{dict[link]}</div>
@@ -46,7 +52,7 @@ function List() {
   );
 }
 
-function Burger({navClass, setNavClass}) {
+function Burger({ navClass, setNavClass }) {
   return (
     <button className="burger-button" onClick={() => {
         if (navClass == "navbar") {
@@ -76,7 +82,7 @@ function Layout() {
       </div>
       <nav className={navClass}>
         <Burger navClass={navClass} setNavClass={setNavClass}></Burger>
-        <List />
+        <List setNavClass={setNavClass} />
       </nav>
       <div className="outlet">
         <Outlet />
