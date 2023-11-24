@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom'
+import { useState } from 'react';
 import { FaSquareFacebook, FaSquareInstagram, FaSquareXTwitter } from 'react-icons/fa6'
-// import logo from '../assets/University_of_Pittsburgh_Logo_CMYK_Secondary_Reverse_2-Color.png'
+import { IoMenu } from "react-icons/io5";
 import logo from '../assets/CESR logo horizontal white copy.png';
 
 // return list for navbar with correct classnames
@@ -45,7 +46,24 @@ function List() {
   );
 }
 
+function Burger({navClass, setNavClass}) {
+  return (
+    <button className="burger-button" onClick={() => {
+        if (navClass == "navbar") {
+          setNavClass("navbar navbar-new");
+        }
+        else {
+          setNavClass("navbar");
+        }
+        console.log(navClass);
+    }}>
+      <IoMenu className="io-menu" />
+    </button>
+  );
+}
+
 function Layout() {
+  const [navClass, setNavClass] = useState("navbar");
   const logoAlt = "Center for Ethnic Studies Research logo";
 
   return (
@@ -56,7 +74,8 @@ function Layout() {
         </div>
         <h1>The Pittsburgh Transformations Project</h1>
       </div>
-      <nav className="navbar">
+      <nav className={navClass}>
+        <Burger navClass={navClass} setNavClass={setNavClass}></Burger>
         <List />
       </nav>
       <div className="outlet">
