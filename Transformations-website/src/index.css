@@ -171,6 +171,27 @@ h1 {
   padding: 0;
 }
 
+.burger-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  float: right;
+  padding: 0;
+}
+
+.burger-button:hover {
+  position: relative;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.io-menu {
+  display: none;
+  font-size: 30px;
+  color: white;
+  z-index: 20;
+}
+
 .outlet {
   flex-grow: 1;
   position: relative;
@@ -304,30 +325,19 @@ input[type="range"]::-moz-range-progress {
 @media screen and (max-width: 950px) {
   .controls-and-bar {
     display: grid;
-
-    /* block details below */
-    /* display: block;
-    align-items: center; */
   }
 
   .progress-bar {
-    /* width: 100%; */
     padding: 0;
     justify-content: center;
     grid-row-start: 1;
     grid-row-end: 2;
-
-    /* block details below */
-    /* padding: 0 5%; */
   }
 
   .audio-controls {
     justify-content: center;
     grid-row-start: 2;
     grid-row-end: 3;
-
-    /* block details below */
-    /* justify-content: center; */
   }
 }
 
@@ -346,6 +356,35 @@ input[type="range"]::-moz-range-progress {
   .audio-player {
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  /* hamburger menu here */
+  .navbar {
+    display: block;
+    padding-bottom: 10px;
+  }
+  
+  .navbar ul {
+    background-color: #003594;
+    display: none;
+    padding-top: 40px;
+  }
+
+  .navbar-new ul {
+    display: block;
+  }
+
+  .navbar li:not(:last-child) {
+    border-right: .01rem solid #003594;
+  }
+
+  .burger-button {
+    display: block;
+    align-items: center;
+  }
+
+  .io-menu {
+    display: block;
   }
 }
 
