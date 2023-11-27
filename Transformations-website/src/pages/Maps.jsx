@@ -8,6 +8,7 @@ import geo2020 from '../pages/mapData/Geojson/2020_zipCode.json'
 import geo1980 from '../pages/mapData/Geojson/geo1980.json'
 import Legend from '../pages/mapData/Legend'
 import '../App.css'
+import FAQ from './mapData/Info/faqMain'
 const center = [40.44, -79.99]
 export default function Map() { 
 
@@ -29,7 +30,7 @@ export default function Map() {
     }
     return ( 
       <div>
-        <h2>Sample text</h2>
+        <FAQ />
         <MapContainer center={center} zoom={11} scrollWheelZoom={false}  whenReady={(map) =>{setMap(map.target)}}  >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
