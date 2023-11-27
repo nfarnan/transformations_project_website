@@ -8,6 +8,7 @@ import geo2020 from '../pages/mapData/Geojson/2020_zipCode.json'
 import geo1980 from '../pages/mapData/Geojson/geo1980.json'
 import Legend from '../pages/mapData/Legend'
 import '../App.css'
+import FAQ from './mapData/Info/faqMain'
 const center = [40.44, -79.99]
 export default function Map() { 
 
@@ -24,12 +25,12 @@ export default function Map() {
     // add 1980 map data with a layer control
     for(let key in tractData){
       table.push(<LayersControl.BaseLayer key = {key} checked={false} name = {key}> 
-        < GeoJSON  data= {geo1980} onEachFeature={onEachTract(tractData[key])}/>          
+        < GeoJSON  data= {geo1980} onEachFeature={onEachTract(tractData[key])} />          
       </LayersControl.BaseLayer> )  
     }
     return ( 
       <div>
-        <h2>Sample text</h2>
+        <FAQ />
         <MapContainer center={center} zoom={11} scrollWheelZoom={false}  whenReady={(map) =>{setMap(map.target)}}  >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -72,6 +73,7 @@ function onEachZipCodeCloser(data){
           dashArray: '3',
           fillOpacity: 0.7,
           })
+          layer.bindPopup("Zip Code: "+zip,{autoClose:false, closeOnClick:false});
       }
     });
   }
@@ -89,6 +91,7 @@ function onEachTract(data){
          fillColor: getColor(pop),
          fillOpacity: .7,
        })
+       layer.bindPopup("Census Tract: "+tract, {autoClose:false, closeOnClick:false});
       } 
     });
     
