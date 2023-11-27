@@ -10,7 +10,6 @@ export default function faqMain(){
             body.style.display = "block";
         }
     }
-    
     return(
         <main>
         <section class="faq-container">
@@ -24,7 +23,7 @@ export default function faqMain(){
             <div class="faq-two">
                 <h1 class="faq-page" onClick={(e) => onEvent(e)}>What is a Census Tract?</h1>
                 <div class="faq-body">
-                    <p>A cencus tract is a geographic region defined for the purpose of taking a census. It is a small relatively permanent subdivions of a county.</p>
+                    <p>A census tract is a geographic region defined for the purpose of taking a census. It is a small relatively permanent subdivions of a county.</p>
                 </div>
             </div>
         </section>

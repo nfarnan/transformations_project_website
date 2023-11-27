@@ -25,7 +25,7 @@ export default function Map() {
     // add 1980 map data with a layer control
     for(let key in tractData){
       table.push(<LayersControl.BaseLayer key = {key} checked={false} name = {key}> 
-        < GeoJSON  data= {geo1980} onEachFeature={onEachTract(tractData[key])}/>          
+        < GeoJSON  data= {geo1980} onEachFeature={onEachTract(tractData[key])} />          
       </LayersControl.BaseLayer> )  
     }
     return ( 
@@ -73,6 +73,7 @@ function onEachZipCodeCloser(data){
           dashArray: '3',
           fillOpacity: 0.7,
           })
+          layer.bindPopup("Zip Code: "+zip,{autoClose:false, closeOnClick:false});
       }
     });
   }
@@ -90,6 +91,7 @@ function onEachTract(data){
          fillColor: getColor(pop),
          fillOpacity: .7,
        })
+       layer.bindPopup("Census Tract: "+tract, {autoClose:false, closeOnClick:false});
       } 
     });
     
