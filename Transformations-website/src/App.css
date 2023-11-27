@@ -14,8 +14,8 @@
     margin:auto;
 }
 .leaflet-control-layers-base > label > span{
-  min-width: 60vh;
-  max-width: 70vh;
+  min-width: 70vh;
+  max-width: 75vh;
   height: 2rem;
   display: block;
   line-height: 1.5rem;

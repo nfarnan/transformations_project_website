@@ -1,5 +1,5 @@
 {
-    "1980 White Population,Alone":{   
+    "1980 White Population,Alone, by Cencus Tract":{   
               "101": 823,
               "102": "3,699",
               "201": "1,049",
@@ -224,7 +224,7 @@
               "5612": 664,
               "5613": "2,190"  
     },
-    "1980 Black Population,Alone":{
+    "1980 Black Population,Alone, by Cencus Tract":{
         
             
               "101": 176,
@@ -453,7 +453,7 @@
             
           
     },
-    "1980 American Indian, Eskimo, and Aleut Population, Alone":{
+    "1980 American Indian, Eskimo, and Aleut Population, Alone, by Cencus Tract":{
         
             
               "101": 1,
@@ -682,7 +682,7 @@
             
           
     },
-    "1980 Asian and Pacific Islander Population,Alone":{
+    "1980 Asian and Pacific Islander Population,Alone, by Cencus Tract":{
         
             
               "101": 19,
@@ -911,7 +911,7 @@
             
           
     },
-    "1980 Other Population, Alone":{
+    "1980 Other Population, Alone, by Cencus Tract":{
             
               "101": 13,
               "102": 49,
@@ -1139,7 +1139,7 @@
             
           
     },
-    "1980 Persons of Spanish Origin, Alone":{
+    "1980 Persons of Spanish Origin, Alone, by Cencus Tract":{
             
               "101": 20,
               "102": 61,

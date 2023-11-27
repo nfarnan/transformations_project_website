@@ -8,7 +8,7 @@ function Legend({map,data}) {
         const legend = L.control({ position: "bottomright" });
         legend.onAdd = function () {
           const div = L.DomUtil.create('div', 'info legend'),
-          grades = [0, 50, 100,500,1000,2500,5000,7500,10000,15000,20000,25000,30000]
+          grades = [0,100,500,1000,2500,5000,7500,10000,20000,30000]
           div.innerHTML = '<span> Population per Area</span>'
           for (var i = 0; i < grades.length; i++) {
             const color = data(grades[i] + 1)

@@ -1,6 +1,6 @@
 
 {
-    "2022 White Population, Alone":
+    "2022 White Population, Alone, by Zip Code":
     {
       "15122": "15,108",
       "15201": "9,316",
@@ -57,7 +57,7 @@
       "15272": 0,
       "15275": 5
     },
-    "2022 Black Population, Alone":
+    "2022 Black Population, Alone, by Zip Code":
     {
       "15122": "2,486",
       "15201": "1,790",
@@ -114,7 +114,7 @@
       "15272": 0,
       "15275": 0 
     },
-    "2022 Asian Population, Alone":{
+    "2022 Asian Population, Alone, by Zip Code":{
       "15122": 156,
       "15201": 418,
       "15202": 318,
@@ -170,7 +170,7 @@
       "15272": 0,
       "15275": 0
     },
-    "2022 American Indian and Alaska Native Population, Alone":{
+    "2022 American Indian and Alaska Native Population, Alone, by Zip Code":{
       "15122": 22,
       "15201": 25,
       "15202": 42,
@@ -226,7 +226,7 @@
       "15272": 0,
       "15275": 0
     },
-    "2022 Other Race Population, Alone":{
+    "2022 Other Race Population, Alone, by Zip Code":{
       "15122": 194,
       "15201": 112,
       "15202": 195,
@@ -282,7 +282,7 @@
       "15272": 0,
       "15275": 0
     },
-    "2022 Two or More Races Population":{
+    "2022 Two or More Races Population, by Zip Code":{
       "15122": "1,004",
       "15201": 617,
       "15202": "1,240",
