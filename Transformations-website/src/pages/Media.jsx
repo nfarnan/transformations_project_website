@@ -1,7 +1,5 @@
 import AudioPlayer from '../components/AudioPlayer';
-import piano1 from '../assets/piano1.wav';
-import piano2 from '../assets/piano2.mp3';
-import piano3 from '../assets/piano3.wav';
+import placeholder from '../assets/placeholder.mp3';
 
 const titles = ['Asian Americans in Pittsburgh',
                      'Black Americans in Pittsburgh',
@@ -16,15 +14,15 @@ function Media() {
        <div className="audio-div">
             <AudioPlayer 
               title={titles[0]}
-              file={piano1}
+              file={placeholder}
               desc={descs[0]}/>
             <AudioPlayer 
               title={titles[1]}
-              file={piano2}
+              file={placeholder}
               desc={descs[1]}/>
             <AudioPlayer 
               title={titles[2]}
-              file={piano3}
+              file={placeholder}
               desc={descs[2]}/>
       </div> 
     ); 
